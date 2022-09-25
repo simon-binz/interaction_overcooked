@@ -1,0 +1,74 @@
+{
+    "level": "exp1",
+    "player_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "ai_actions": [
+        2,
+        2,
+        2,
+        4,
+        5,
+        1
+    ],
+    "timestep": [
+        1.077,
+        1.661,
+        2.1679999999999975,
+        2.6710000000000016,
+        3.1730000000000045,
+        3.6730000000000054
+    ],
+    "initial_commands": [
+        "SliceTomato"
+    ],
+    "command_stacks": [
+        [
+            "SliceTomato"
+        ],
+        [
+            "SliceTomato"
+        ],
+        [
+            "SliceTomato"
+        ],
+        [
+            "SliceTomato"
+        ],
+        [
+            "SliceTomato"
+        ],
+        [
+            "SliceTomato"
+        ]
+    ],
+    "current_command_level": [
+        "High",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High"
+    ],
+    "commands_given": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "actions_canceled": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ]
+}
