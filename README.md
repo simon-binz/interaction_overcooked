@@ -1,8 +1,8 @@
 # Disclaimer
 
 This work was derived from https://github.com/DavidRother/gym-cooking and has been extended for Human-AI interaction. To
-run the experiment, refer to the gym-cooking/gym_cooking/main.py file. There two different agents can be used for the experiment.
-One with an updated plan every step and one with an updated policy after every high level goal.
+run the experiment, refer to the gym-cooking/gym_cooking/main.py file. There are two different agents that can be used for the experiment.
+One with an updated plan every step and one with an updated policy after every high level goal. The replays will be saved to the gym-cooking/gym_cooking/replays directory. The term continous in this work refers to the agent taking a set ammount of actions per second instead of waiting for a human action to perform its action. 
 
 # Code for CookingZoo
 
