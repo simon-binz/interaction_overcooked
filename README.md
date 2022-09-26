@@ -1,4 +1,4 @@
-##Disclaimer
+# Disclaimer
 
 This work was derived from https://github.com/DavidRother/gym-cooking and has been extended for Human-AI interaction. To
 run the experiment, refer to the gym-cooking/gym_cooking/main.py file. There two different agents can be used for the experiment.
