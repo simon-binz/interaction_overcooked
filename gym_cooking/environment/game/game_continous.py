@@ -290,7 +290,9 @@ class Game_continous:
                     if len(self.ai_policies[0].commands) < 1:
                         self.ai_action_timer += 5
                 if button in self.env.unwrapped.world.commandLevels:
-                    self.changeCommandLevel(button)
+                    pass
+                    #not used currently
+                    #self.changeCommandLevel(button)
                 self.ai_policies[0].commands = self.env.unwrapped.world.IntentionStack
 
     #method for replay data
