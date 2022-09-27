@@ -297,14 +297,38 @@ class Game_continous:
     def save_commands(self, button):
         #intention_stack popped
         if isinstance(button, int):
-            self.tmp_actions_canceled.append(self.env.unwrapped.world.IntentionStack[button].intention)
+            if self.game_started:
+                self.actions_canceled.append([self.env.unwrapped.world.IntentionStack[button].intention])
+                self.timestamps.append(self.time)
+                self.player_actions.append(0)
+                self.ai_actions.append(0)
+                intentions = []
+                for intention in self.env.unwrapped.world.IntentionStack:
+                    intentions.append(intention.intention)
+                intentions.pop(button)
+                self.command_stack.append(intentions)
+                self.commands_given.append([])
+            else:
+                self.tmp_actions_canceled.append(self.env.unwrapped.world.IntentionStack[button].intention)
         #command_level
         else:
             if button in self.env.unwrapped.world.commandLevels:
                 pass
             #command_given
             else:
-                self.tmp_commands_given.append(button)
+                if self.game_started:
+                    self.commands_given.append([button])
+                    self.timestamps.append(self.time)
+                    self.player_actions.append(0)
+                    self.ai_actions.append(0)
+                    intentions = []
+                    for intention in self.env.unwrapped.world.IntentionStack:
+                        intentions.append(intention.intention)
+                    intentions.append(button)
+                    self.command_stack.append(intentions)
+                    self.actions_canceled.append([])
+                else:
+                    self.tmp_commands_given.append(button)
 
     #resolve actions taken by human/agents in the environment
     def resolve_action(self, human_action, ai_action, store_action_dict):

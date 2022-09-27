@@ -86,7 +86,7 @@ class Replay_viewer:
             for intention in self.intentions_stacks.pop(0):
                 intentions.append(Intention(intention))
             self.env.unwrapped.world.IntentionStack = intentions
-
+            self.graphics_pipeline.updateIntentions()
             commands_given = self.commands_given.pop(0)
             for command in commands_given:
                 print("Player gave command: ", command)
@@ -230,6 +230,3 @@ class Replay_viewer:
         if all(dones.values()):
             self._running = False
             self.store["observation"].append(self.last_obs)
-
-
-
